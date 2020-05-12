@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Album Informotion</title>
+    </head>
+    <body>
+        <table>
+   				<tr>
+       				 <th>  Album_name  </th>
+       				 <td> {{ album.album_name }} </td>
+  				</tr>
+  				<tr>
+       				 <th>  Album_id  </th>
+       				 <td> {{ album.album_id }} </td>
+  				</tr>
+  				<tr>
+       				 <th>  No_of_trracks  </th>
+       				 <td> {{ album.total_no_of_tracks }} </td>
+  				</tr>
+  				<tr>
+       				 <th>  Artist  </th>
+       				 <td> <div><b> Artist_id: </b>{{ album.artist.artist_id }}  <b> Artist_Name: </b>{{ album.artist.artist_Name }}</div></td>
+  				</tr>
+  				<tr>
+       				 <th>  Songs_List  </th>
+       				 <td>
+       				 {% for song in album.songslist %}
+       				 	<tr>
+       				 	<table>
+       				 	<th> &nbsp  &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp Track_Id  </th>
+       				 	<td> {{ song.Track_Id }} </td>
+       				 	<th> &nbsp  &nbsp &nbsp &nbspGenere Name  </th>
+       				 	<td> {{ song.genre_name }} </td>
+       				 	<th>  &nbsp  &nbsp &nbsp &nbsp Track_Name  </th>
+       				 	<td> {{ song.Track_Name }} </td>
+       				 	</table>
+       				 	</tr>
+       				 {% endfor %}
+       				 </td>
+  				</tr>
+		</table>
+    </body>
+</html>
+
+		

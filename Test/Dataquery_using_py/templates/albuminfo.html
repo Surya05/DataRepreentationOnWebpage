@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>List Of Albums</title>
+    </head>
+    <body>	
+		{% for album in albums %}
+        	<table>
+        		<th>Album_Id:</th> <td>{{ album.Album_Id }}</td>
+        		<th>Album_Name:</th> <td>{{ album.Album_Name }}</td>
+        		<th>Artist_Name:</th> <td>{{ album.Artist.name }}</td>
+        		<th>Artist_Id:</th> <td>{{ album.Artist.id }}</td>
+        	</table>
+		{% endfor %}
+    </body>
+</html>

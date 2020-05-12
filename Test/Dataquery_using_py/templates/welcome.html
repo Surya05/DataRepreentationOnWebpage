@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+      <title>Welcome</title>
+    </head>
+	<body>
+	
+    <form  method="get">
+    <fieldset>
+	<p>Enter your album id to get the information</p>     
+        <p>
+          <label>Album Id</label>
+          <input type = "text"
+                 id = "myText"
+                 value = "" />
+        </p>
+        <button onclick="myFunction()">Submit</button>
+	</fieldset>
+		<script>
+		function myFunction() {
+		var userInput = document.getElementById('myText').value;
+		//window.location = "https://127.0.0.1:5000/album/" + userInput;
+  		window.open("http://127.0.0.1:5000/album/"+userInput)
+		}
+	</script>
+    </form>
+    
+    
+    <form  method="get">
+    <fieldset>
+	<p>Search by Album Name</p>
+	<p>
+          <label>Type Your Text Here For search using Album</label>
+          <input type = "text"
+                 id = "album"
+                 value = "" />
+        </p>
+        <button onclick="albumSearch()">Submit</button>
+		</fieldset>
+		<script>
+		function albumSearch() {
+		var userInput = document.getElementById('album').value;
+		//window.location = "https://127.0.0.1:5000/album/" + userInput;
+  		window.open("http://127.0.0.1:5000/search/album/"+userInput)
+		}
+	</script>
+	</form>
+	
+	
+    <form  method="get">
+    <fieldset>
+	<p>Search by Artist Name</p>
+	<p>
+          <label>Type Your Text Here For search using Artist</label>
+          <input type = "text"
+                 id = "artist"
+                 value = "" />
+        </p>
+        <button onclick="artistSearch()">Submit</button>
+	</fieldset>
+		<script>
+		function artistSearch() {
+		var userInput = document.getElementById('artist').value;
+		//window.location = "https://127.0.0.1:5000/album/" + userInput;
+  		window.open("http://127.0.0.1:5000/search/artist/"+userInput)
+		}
+	</script>
+	</form>
+	</body>
+</html>
